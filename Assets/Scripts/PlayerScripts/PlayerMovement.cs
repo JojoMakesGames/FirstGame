@@ -45,9 +45,4 @@ public class PlayerMovement : MonoBehaviour
         playerVelocity.y += GravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
-
-    void OnCollisionEnter() {
-
-    }
-
 }
