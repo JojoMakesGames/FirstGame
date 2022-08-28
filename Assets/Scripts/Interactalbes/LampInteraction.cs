@@ -12,7 +12,17 @@ public class LampInteraction : PossessableObject
     // Update is called once per frame
     void Update()
     {
-        
+        if(Possessed) {
+            if(Input.GetButtonDown("Action"))
+            {
+                SpookyAction();
+            }
+            if(Input.GetButtonDown("Possess"))
+            {
+                Player.SetActive(true);
+                Possessed = false;
+            }
+        }
     }
 
     public override void SpookyAction() {
